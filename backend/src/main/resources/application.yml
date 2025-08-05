@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: banking-system
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/banking_system?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&useLegacyDatetimeCode=false&serverTimezone=UTC&useUnicode=yes&characterEncoding=UTF-8
+    username: root
+    password: shivam73
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: create  # Create schema only if it doesn't exist
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        hbm2ddl:
+          auto: create
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        globally_quoted_identifiers: false
+    
+  # Disable Flyway to avoid circular dependency
+  flyway:
+    enabled: false
+        
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: banking-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.banking.events"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+app:
+  jwt:
+    secret: YmFua2luZ1N5c3RlbVNlY3JldEtleUZvckpXVFRva2VuR2VuZXJhdGlvbkFuZFZhbGlkYXRpb24yMDI1
+    expiration-ms: 86400000 # 24 hours
+    
+  kafka:
+    topics:
+      transactions: banking.transactions
+      suspicious-transactions: banking.suspicious.transactions
