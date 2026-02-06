@@ -95,3 +95,5 @@ Summary:
 - Forms tested: 2
 - Test cases: X passed / Y failed
 - Critical issues found
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.

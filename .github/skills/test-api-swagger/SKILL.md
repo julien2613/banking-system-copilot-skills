@@ -202,3 +202,5 @@ Write the report to `test-reports/api-swagger-report.md`:
 - Passed: X / Failed: Y
 - Critical issues found: (list)
 - Security observations: (auth bypass, missing validation, etc.)
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.

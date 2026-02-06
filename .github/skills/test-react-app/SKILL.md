@@ -71,3 +71,5 @@ Summary:
 - Total elements verified
 - Issues or warnings found
 - Overall Pass/Fail
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.

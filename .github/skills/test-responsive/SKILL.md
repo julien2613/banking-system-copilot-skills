@@ -80,3 +80,5 @@ Summary:
 - Pages tested: X
 - Issues found: Y
 - Recommendations
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.

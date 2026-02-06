@@ -142,3 +142,5 @@ npx playwright install chromium
 - Create all files in `e2e/` directory
 - Summary of tests generated with coverage areas
 - Run command: `npx playwright test --config=e2e/playwright.config.ts`
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.

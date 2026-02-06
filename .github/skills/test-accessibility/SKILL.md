@@ -85,3 +85,5 @@ Write the report to `test-reports/accessibility-report.md`:
 - Minor (recommendations): X
 - Estimated WCAG conformance: A / AA / not conformant
 - Recommended code fixes with examples
+
+> **Tip**: Run the `publish-reports` skill to publish this report to GitHub Pages.
