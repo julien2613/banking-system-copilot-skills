@@ -1,0 +1,21 @@
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "openapi": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@ivotoby/openapi-mcp-server"
+      ],
+      "env": {
+        "API_BASE_URL": "http://localhost:8081/api",
+        "OPENAPI_SPEC_PATH": "http://localhost:8081/api/v3/api-docs"
+      }
+    }
+  }
+}

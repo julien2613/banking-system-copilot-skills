@@ -25,7 +25,24 @@ yarn-error.log*
 !.env.example
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/mcp.json
+!.vscode/toolsets.jsonc
+!.vscode/settings.json
 *.swp
 *.swo
 .DS_Store
+
+# Build artifacts
+backend/target/
+
+# Test reports & screenshots
+test-reports/
+*.png
+
+# Temporary analysis files
+*-snapshot.md
+*-analysis.md
+
+# Docker volumes
+docker/mysql-data/

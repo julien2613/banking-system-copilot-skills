@@ -1,0 +1,26 @@
+{
+  // Full testing toolkit: MCP Playwright + codebase analysis + file operations
+  "testing": {
+    "tools": [
+      "playwright/*",
+      "search/codebase",
+      "web/fetch",
+      "read/problems",
+      "search/usages",
+      "search/changes"
+    ],
+    "description": "Test React TypeScript apps with MCP Playwright (navigate, click, type, screenshot, snapshot)",
+    "icon": "beaker"
+  },
+  // API testing toolkit: OpenAPI/Swagger MCP + codebase analysis
+  "api-testing": {
+    "tools": [
+      "openapi/*",
+      "search/codebase",
+      "web/fetch",
+      "read/problems"
+    ],
+    "description": "Test REST APIs via Swagger/OpenAPI spec using MCP OpenAPI server",
+    "icon": "plug"
+  }
+}
